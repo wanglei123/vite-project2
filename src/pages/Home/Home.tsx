@@ -1,13 +1,13 @@
 import Reduce_Test from "@/pages/Reduce_Test";
-import style from './index.module.scss'
+import Effect_Test from "@/pages/Effect_Test";
 
 const Home = () => {
     return (
         <>
             <Reduce_Test />
-            <div className={style.wrap}>
-                123
-            </div></>
+            <hr/>
+            <Effect_Test />
+        </>
     );
 };
 

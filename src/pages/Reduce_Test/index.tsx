@@ -1,3 +1,4 @@
+import {getById} from '@/utils.ts'
 
 const Index = () => {
     const numbers = [1,2,3,4,5]
@@ -15,6 +16,14 @@ const Index = () => {
     const mapRes = numbers.reduce((arr: any[], value: number) => {
         return [...arr, value * 100]
     }, [])
+
+    // promise
+    const ids = [10, 20, 30]
+     ids.reduce(async (promise: Promise<void>,id: number): Promise<any> => {
+        await promise
+        return getById(id)
+    }, Promise.resolve())
+
 
     return (
         <div>
