@@ -27,6 +27,7 @@ const Index = () => {
 
     return (
         <div>
+            <div>reduce函数：</div>
             <div>data: {JSON.stringify(numbers)}</div>
             <div>includes: {JSON.stringify(res)}</div>
             <div>slice(1,4): {JSON.stringify(sliceRes)}</div>

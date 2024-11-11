@@ -8,7 +8,7 @@ export const getPromiseData = () => {
     })
 }
 
-const useCalbackRef = (callback) => {
+const useCalbackRef = (callback: any) => {
     const callbackRef = useRef(callback)
     useLayoutEffect(() => {
         callbackRef.current = callback
@@ -19,7 +19,7 @@ const useCalbackRef = (callback) => {
 
 
 export const useFetch = (option: any) => {
-    const [data, setData] = useState<{}>(null)
+    const [data, setData] = useState(null)
     const onSavedSuccess = useCalbackRef(option.onSuccess)
 
 
