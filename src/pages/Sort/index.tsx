@@ -3,7 +3,9 @@
 // 不占用额外空间：原地排序
 const Index = () => {
     const data = [5,65,1,2,3,4,6,77]
-    const chooseSort = (arr: any[]) => {
+    const strArr = ['123123','sdfsdfsdf', '1ssrer', 'sssss']
+
+    const chooseSort = <T,>(arr: T[]): T[] => {
         for (let i = 0; i < arr.length; i++) {
             // 选择arr[i,n)最小值的索引
             let minIndex = i
@@ -23,8 +25,12 @@ const Index = () => {
     }
     return (
         <div>
-            选择排序{JSON.stringify(data)}
-            结果：{JSON.stringify(chooseSort(data))}
+            <div>选择排序：</div>
+            数值型：{JSON.stringify(data)}
+            结果：{JSON.stringify(chooseSort<number>(data))}
+            <br />
+            字符串：{JSON.stringify(strArr)}
+            结果：{JSON.stringify(chooseSort<string>(strArr))}
         </div>
     );
 };
