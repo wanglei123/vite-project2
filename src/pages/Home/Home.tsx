@@ -3,6 +3,7 @@ import Effect_Test from "@/pages/Effect_Test";
 import LinearSearch from "@/pages/LinearSearch";
 import Sort from '@/pages/Sort'
 import InsertSort from "@/pages/Sort/insertSort.tsx";
+import Stack from "@/pages/Stack";
 
 const Home = () => {
     return (
@@ -16,6 +17,8 @@ const Home = () => {
             <Sort />
             <hr />
             <InsertSort />
+            <hr />
+            <Stack />
         </>
     );
 };
